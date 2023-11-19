@@ -1,0 +1,35 @@
+class Solution
+{
+    long maxSubarraySum(int arr[], int n){
+        
+        // Your code here
+        
+        long sum =0;
+        
+        long oSum=arr[0];
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            
+            sum+=arr[i];
+            
+            if(sum>oSum)
+            {
+                oSum = sum;
+            }
+            
+            if(sum<0)
+            {
+                sum =0;
+            }
+            
+        }
+        
+        return oSum;
+        
+        
+        
+    }
+    
+}
+
