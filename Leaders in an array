@@ -1,0 +1,31 @@
+static ArrayList<Integer> leaders(int arr[], int n)
+    {
+       ArrayList<Integer> list = new ArrayList<>();
+       
+       for(int i=0;i<arr.length;i++)
+       {
+           
+           int j=0;
+           for( j=i+1;j<arr.length;j++)
+           {
+               if(arr[j]>arr[i])
+               {
+                   break;
+               }
+               
+           }
+          
+           if(j==arr.length)
+           {
+              // System.out.print(j+" ");
+               list.add(arr[i]);
+           }
+           
+           
+           
+       }
+       
+       return list;
+       
+       
+    }
