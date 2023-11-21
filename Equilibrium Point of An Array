@@ -1,0 +1,29 @@
+ public static int equilibriumPoint(long arr[], int n) 
+    {
+        int prefix =0;
+        int suffix =0;
+        
+        int sum =0;
+        for(int i=0;i<arr.length;i++)
+        {
+            sum+= arr[i];
+        }
+        
+        suffix=sum;
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            suffix-=  (int)arr[i];
+            
+            
+            if(prefix == suffix)
+            {
+                return i+1;
+            }
+          
+             prefix+= arr[i];
+        }
+        
+        return -1;
+        
+    }
